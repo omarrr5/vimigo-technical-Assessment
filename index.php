@@ -57,19 +57,19 @@ require_once('includes/dbh.inc.php');
         <form action="includes/signup.inc.php" method="post"  id="form1"  class="center">
             <h2>FILL IN YOUR DETAILS!</h2>
             <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" placeholder="Steve"><br>
+            <input type="text" id="fname" name="fname" placeholder="Steve" required class="validation"><br>
 
             <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" placeholder="Jobs">
+            <input type="text" id="lname" name="lname" placeholder="Jobs" required class="validation">
 
             <label for="phone">Phone number:</label><br>
-            <input type="text" id="phone" name="phone" placeholder="0182670560">
+            <input type="text" id="phone" name="phone" placeholder="0182670560" required class="validation">
 
             <label for="email">Email address:</label><br>
-            <input type="email" id="email" name="email" placeholder="steve.jobs@gmail.com">
+            <input type="email" id="email" name="email" placeholder="steve.jobs@gmail.com" required class="validation">
 
             <label for="introduce" id="introduce" name="introduce">Introduce yourself!</label>
-            <input  type="text" name="introduce" placeholder="Write something about yourself!">
+            <input  type="text" name="introduce" placeholder="Write something about yourself!" required class="validation">
             <button type="submit" name="submit" onclick="location.href='questions.html'" class="button">Next</button>
         </form>
     </div>
