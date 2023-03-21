@@ -80,6 +80,12 @@ input {
   border-radius: 40px;
 }
 
+
+.admin-form{
+  margin: auto;
+  width: 50%;
+}
+
 .button {
   background-color: #4114a1;
   border: none;
