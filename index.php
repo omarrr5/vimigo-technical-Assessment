@@ -19,10 +19,8 @@ require_once('includes/dbh.inc.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 </head>
-
 <body>
 
-   
 
     <nav class="navbar">
         <div class="logo">Vimigo Tech</div>
@@ -36,7 +34,6 @@ require_once('includes/dbh.inc.php');
         </div>
         </ul>
     </nav>
-  
 
 
     <section class="hero-banner">
@@ -54,4 +51,46 @@ require_once('includes/dbh.inc.php');
             </div>
         </div>
     </section>
+
+    <section class="details-section">
+    <div class="details">
+        <form action="includes/signup.inc.php" method="post"  id="form1"  class="center">
+            <h2>FILL IN YOUR DETAILS!</h2>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Steve"><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Jobs">
+
+            <label for="phone">Phone number:</label><br>
+            <input type="text" id="phone" name="phone" placeholder="0182670560">
+
+            <label for="email">Email address:</label><br>
+            <input type="email" id="email" name="email" placeholder="steve.jobs@gmail.com">
+
+            <label for="introduce" id="introduce" name="introduce">Introduce yourself!</label>
+            <input  type="text" name="introduce" placeholder="Write something about yourself!">
+            <button type="submit" name="submit" onclick="location.href='questions.html'" class="button">Next</button>
+        </form>
+    </div>
+</section>
+
+
+<section class="footer">
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://www.instagram.com/vimigoapp/?hl=en"><i class="icon ion-social-instagram"></i></a><a href="https://www.facebook.com/vimigoapp/"><i class="icon ion-social-facebook"></i></a><a href="https://www.linkedin.com/company/vimigoapp/?originalSubdomain=my"><i class="icon ion-social-linkedin"></i></a><a href="https://www.youtube.com/c/VIMIGO"><i class="icon ion-social-youtube"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="https://www.vimigoapp.com/packages/">Packages</a></li>
+                <li class="list-inline-item"><a href="https://www.vimigoapp.com/about-us/">About</a></li>
+                <li class="list-inline-item"><a href="faq.html">FAQ</a></li>
+                <li class="list-inline-item"><a href="https://www.vimigoapp.com/privacy-policy/">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Vimigo Tech © 2023 | Made by omar tarek.</p>
+        </footer>
+    </div>
+</section>    
+</body>
+</html>
 
