@@ -14,18 +14,7 @@ function emptyInputSignup($fname,$lname,$phone,$email,$introduce){
     return  $result;
 }
 
-function invalidEmail($email){
-    $result;
 
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $result = true;
-    }
-
-    else{
-        $result = false;
-    }
-    return $result;
-}
 
 
 
@@ -34,13 +23,13 @@ function invalidEmail($email){
     $stmt = mysqli_stmt_init($con);
  
     if(!mysqli_stmt_prepare($stmt,$sql)){
-     header("location: ../index.html?error=rrrr");
+     header("location: ../index.php?error=rrrr");
      exit();
     }
     mysqli_stmt_bind_param($stmt, "sssss", $fname, $lname, $phone, $email, $introduce);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../index.html?error=none");
+    header("location: ../index.php?error=none");
     exit();
  }
 

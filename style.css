@@ -332,4 +332,20 @@ footer-basic {
 
 
 
+#add_button
+{
+    position: absolute;
+    background-color: #FF004F;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border-color: black;
+    right: 30%;
+    top: 50%;
+    width: initial;
+}
+
+
+
+
 

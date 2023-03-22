@@ -18,26 +18,11 @@ if(isset($_POST["submit"])) {
     }
 
 
-    if(invalidEmail($email) !==false) {
-
-        header("location: ../index.html?error=invalidEmail");
-        exit();
-    }
-
-
-    if(UidExists($con, $email) !==false) {
-
-        header("location: ../index.html?error=usernametaken");
-        exit();
-    }
-
- 
-
     createUser($con, $fname, $lname, $phone, $email, $introduce);
 
 }
 
 else {
-    header("location: ../index.html");
+    header("location: ../index.php");
     exit();
 }

@@ -54,7 +54,7 @@ require_once('includes/dbh.inc.php');
 
     <section class="details-section">
     <div class="details">
-        <form action="includes/signup.inc.php" method="post"  id="form1"  class="center">
+        <form action="includes/signup.inc.php" method="post"  class="center">
             <h2>FILL IN YOUR DETAILS!</h2>
             <label for="fname">First name:</label><br>
             <input type="text" id="fname" name="fname" placeholder="Steve" required class="validation"><br>
