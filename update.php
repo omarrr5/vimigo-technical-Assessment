@@ -23,7 +23,7 @@
         <div class="logo">Vimigo Tech</div>
         <ul class="nav-links">  
         <div class="menu">
-      <li><a href="#">Home</a></li>
+      <li><a href="index.php">Home</a></li>
         <li><a href="https://www.vimigoapp.com/about-us/">About</a></li>
         <li><a href="https://www.vimigoapp.com/packages/">Packages</a></li>
         <li><a href="faq.html">FAQ</a></li>
