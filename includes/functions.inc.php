@@ -27,8 +27,9 @@ function invalidEmail($email){
     return $result;
 }
 
- 
- function createUser ($con, $fname, $lname , $phone, $email, $introduce){
+
+
+  function createUser ($con, $fname, $lname , $phone, $email, $introduce){
     $sql = "INSERT INTO UserDetails (FirstName, LastName , phone, email, textBox)  VALUES (?, ?, ?, ?, ?) ;";
     $stmt = mysqli_stmt_init($con);
  
@@ -43,3 +44,6 @@ function invalidEmail($email){
     exit();
  }
 
+
+
+    

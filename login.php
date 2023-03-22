@@ -1,3 +1,6 @@
+<?php include 'includes/dbh.inc.php';?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,19 +31,58 @@
         </ul>
     </nav>
 
-    <div class="admin-form">
-        <h2>Admin Login</h2>
-        <form>
-          <p>
-          <input type="text" id="username" name="username" placeholder="Username" required><i class="validation"><span></span><span></span></i>
-          </p>
-          <p>
-          <input type="password" id="pwd" name="pwd" placeholder="Password" required><i class="validation"><span></span><span></span></i>
-          </p>
-          <p>
-          <input  onclick="location.href='admin-panel.html'" type="submit" id="login" value="Login">
-          </p>
-        </form>
-</div>    
+
+    <section class="login-form">
+    <form class="modal-content animate"  action="" method="post">
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="adminUid" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="adminPwd" required>
+
+      <button type="submit" name="login" id="login" class="button">Login</button>
+    </div>
+    </form>
+    </section>
+
+
+
+    <?php
+function test_input($data) {
+      
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+ 
+if ($_SERVER["REQUEST_METHOD"]== "POST") {
+    
+  $adminname = test_input($_POST["adminUid"]);
+  $password = test_input($_POST["adminPwd"]);
+  $stmt = $con->prepare("SELECT * FROM adminlogin");
+  $stmt->execute();
+  $users = $stmt->get_result();
+  $result = $users->fetch_all();
+  
+  foreach($users as $user) {
+        
+      if(($user['adminUid'] == $adminname) && 
+          ($user['adminPwd'] == $password)) {
+              header("Location: admin-panel.html");
+      }
+      else {
+          echo "<script language='javascript'>";
+          echo "alert('WRONG INFORMATION')";
+          echo "</script>";
+          die();
+      }
+  }
+}
+
+?>
+
+
 </body>
 </html>
